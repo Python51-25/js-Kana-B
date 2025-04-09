@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .task {
+            padding: 10px 15px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .task:nth-child(odd) {
+            background-color: #b3e0f7; /* голубой фон для нечетных элементов */
+        }
+        .task:nth-child(even) {
+            background-color: #e0f7fa; /* голубой фон для четных элементов */
+        }
+        .task.completed {
+            background-color: #d1d1d1; /* серый фон для отмеченных задач */
+            text-decoration: line-through;
+        }
+        .task.completed .task-icon {
+            content: url('https://img.icons8.com/material-outlined/24/000000/checkmark--v1.png'); /* иконка с галочкой */
+            margin-right: 10px;
+        }
+        .task .task-icon {
+            content: url('https://img.icons8.com/material-outlined/24/000000/submit-progress.png'); /* иконка без галочки */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Список задач</h1>
+    <ul>
+        <li class="task"><span class="task-icon"></span>Купить продукты</li>
+        <li class="task completed"><span class="task-icon"></span>Убрать в квартире</li>
+        <li class="task"><span class="task-icon"></span>Проверить почту</li>
+        <li class="task completed"><span class="task-icon"></span>Сделать домашнее задание</li>
+        <li class="task"><span class="task-icon"></span>Написать отчет</li>
+        <li class="task completed"><span class="task-icon"></span>Позвонить другу</li>
+    </ul>
+</body>
+</html>
